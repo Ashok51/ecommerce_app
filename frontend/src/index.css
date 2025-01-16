@@ -1,0 +1,14 @@
+/* Ensure the body and html take full viewport height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fffaf0; /* Creamy White */
+  color: #333;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+footer {
+  margin-top: auto;
+}
