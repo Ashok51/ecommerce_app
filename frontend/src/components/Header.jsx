@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 import logo from '../assets/styles/logo.png'
 import { LinkContainer } from "react-router-bootstrap";
 
@@ -14,11 +15,11 @@ const Header = () => {
           <Navbar.Toggle area-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/cart">
+              <Nav.Link as={Link} to="/cart">
                 <FaShoppingCart />
                 Cart
               </Nav.Link>
-              <Nav.Link href="/login">
+              <Nav.Link as={Link} to="/login">
                 <FaUser />
                 Sign In
               </Nav.Link>
