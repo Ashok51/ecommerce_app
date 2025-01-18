@@ -1,13 +1,14 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import logo from '../assets/styles/logo.png'
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand>
             Saru Plastics
           </Navbar.Brand>
           <Navbar.Toggle area-controls="basic-navbar-nav" />
