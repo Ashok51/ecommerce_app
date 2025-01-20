@@ -12,3 +12,16 @@ html, body, #root {
 footer {
   margin-top: auto;
 }
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+
+.rating svg{
+  color: #fcda00;
+}
+.rating span{
+  margin: 0.1rem;
+}
