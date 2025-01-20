@@ -11,13 +11,15 @@ import "./index.css";
 import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeScreen from "./screens/HomeScreen.jsx";
+import ProductScreen from "./screens/ProductScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<App />}>      {/* parent route*/}
         <Route index={true} element={<HomeScreen />} /> {/* child route*/}
-        <Route to='/cart' element={<HomeScreen />} /> {/* child route*/}
+        <Route path ='/cart' element={<HomeScreen />} /> {/* child route*/}
+        <Route path = "/product/:id" element={<ProductScreen />} />
       </Route>
     </Route>
   )
