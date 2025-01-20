@@ -17,6 +17,7 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<App />}>      {/* parent route*/}
         <Route index={true} element={<HomeScreen />} /> {/* child route*/}
+        <Route to='/cart' element={<HomeScreen />} /> {/* child route*/}
       </Route>
     </Route>
   )

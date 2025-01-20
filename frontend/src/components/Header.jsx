@@ -9,7 +9,7 @@ const Header = () => {
     <header>
       <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand as={Link} to='/'>
             Saru Plastics
           </Navbar.Brand>
           <Navbar.Toggle area-controls="basic-navbar-nav" />
