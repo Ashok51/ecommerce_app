@@ -12,3 +12,24 @@ html, body, #root {
 footer {
   margin-top: auto;
 }
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+
+.rating svg{
+  color: #fcda00;
+}
+
+.rating span{
+  margin: 0.1rem;
+}
+
+.product-title{             /* to show title in same line  */
+  height: 2.5em;            /* setting a fixed height*/
+  overflow: hidden;         /* don't show overflowed content*/
+  white-space: nowrap;     /* content not breaking in multiple lines */
+  text-overflow: ellipsis;  /* 3 ota dots */
+}
