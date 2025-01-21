@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 
 # backend
-/backend/data/products.js
+backend/data
