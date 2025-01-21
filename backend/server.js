@@ -1,7 +1,9 @@
 import express from "express";
 import products from "../frontend/products.js"; // remember: esmodule call with .js extension
+import dotenv from 'dotenv'
+dotenv.config()
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000
 
 const app = express()
 
