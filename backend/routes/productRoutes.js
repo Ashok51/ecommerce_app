@@ -1,16 +1,24 @@
 import express from 'express'
-import products from "../data/products.js" // remember: esmodule call with .js extension
+import asyncHandler from '../middleware/asyncHandler.js'
+import Product from '../models/productModel.js'
 
 const router = express.Router();
 
-router.get('/', (req, res)=>{
+router.get('/', asyncHandler(async(req, res)=>{
+  const products = await Product.find({})
+  console.log(products)
   res.json(products)
-})
+}))
 
-router.get('/:id', (req, res)=>{
-  const product = products.find((p)=> p._id == req.params.id)
-  res.json(product)
-})
+router.get('/:id', asyncHandler(async(req, res)=>{
+  const product = await Product.findById(req.params.id)
+  if (product){
+    res.json(product)
+  }
+  console.log(product)
+
+  res.status(404).json({message: "product not found"})
+}))
 
 
 export default router
