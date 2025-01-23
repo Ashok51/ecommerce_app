@@ -25,4 +25,5 @@ dist-ssr
 *.sw?
 
 # backend
-backend/data
+# backend/data
+.env
