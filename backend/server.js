@@ -4,7 +4,12 @@ import products from "../frontend/products.js"; // remember: esmodule call with 
 import dotenv from 'dotenv'
 dotenv.config()
 
+import connectDB from './config/db.js'
+
+
 const PORT = process.env.PORT || 5000
+
+connectDB();  // connect to MongoDB
 
 const app = express()
 
