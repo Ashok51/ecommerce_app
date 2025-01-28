@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 // import { useGetProductsQuery } from "../slices/productsApiSlice";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
+import Loader from "../components/Loader";
 
 // these screens are used like the home screen, about screen, contact screen
 const HomeScreen = () => {
@@ -11,7 +12,7 @@ const HomeScreen = () => {
   return (
     <>
       {isLoading ? (
-        <div> Loading...</div>
+        <Loader />
       ) : error ? (
         error?.data?.message || error.message
       ) : (
