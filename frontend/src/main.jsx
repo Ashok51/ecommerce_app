@@ -12,6 +12,8 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeScreen from "./screens/HomeScreen.jsx";
 import ProductScreen from "./screens/ProductScreen.jsx";
+import {Provider} from 'react-redux'
+import store from "./store.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,5 +28,7 @@ const router = createBrowserRouter(
 );
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={ store} >
+    <RouterProvider router={router} />
+  </Provider>
 );
