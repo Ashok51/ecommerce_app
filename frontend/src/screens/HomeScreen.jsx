@@ -7,14 +7,13 @@ import { useGetProductsQuery } from "../slices/productsApiSlice";
 // these screens are used like the home screen, about screen, contact screen
 const HomeScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
-  debugger;
 
   return (
     <>
       {isLoading ? (
         <div> Loading...</div>
       ) : error ? (
-        error.data.message || error.message
+        error?.data?.message || error.message
       ) : (
         <>
           <h1>Latest Products</h1>
